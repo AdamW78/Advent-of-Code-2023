@@ -133,23 +133,30 @@ You can also ask for hints in the [subreddit](https://www.reddit.com/r/adventofc
   or name it something similar.
 
 
---- Credits ---
+### [](#credits)Credits
 
-Puzzles, Code, & Design: Eric Wastl
+* **Puzzles, Code, & Design:** [Eric Wastl](http://was.tl/)
 
-Beta Testing:
+* **Beta Testing:**
+  * [Tim Giannetti](https://twitter.com/Sr_Giannetti)
+  * Ben Lucek
+  * [JP Burke](http://thespaceabove.us/)
+  * [Aneurysm9](https://twitter.com/Aneurysm9)
+  * Andrew Skalski
 
-    Tim Giannetti
-    Ben Lucek
-    JP Burke
-    Aneurysm9
-    Andrew Skalski
+* **Community Managers:** [Danielle Lucek](https://reddit.com/message/compose/?to=/r/adventofcode)
+and [Aneurysm9](https://twitter.com/Aneurysm9)
 
-Community Managers: Danielle Lucek and Aneurysm9
+* **Playing:** You!
 
-Playing: You!
---- Legal ---
+### [](#legal)Legal
 
-Advent of Code is a registered trademark in the United States. The design elements, language, styles, and concept of Advent of Code are all the sole property of Advent of Code and may not be replicated or used by any other person or entity without express written consent of Advent of Code. Copyright 2015-2023 Advent of Code. All rights reserved.
+Advent of Code is a registered trademark in the United States. 
+The design elements, language, styles, and concept of Advent of Code are all the sole property of Advent of Code,
+and may not be replicated or used by any other person or entity without express written consent of Advent of Code.
+Copyright 2015-2023 Advent of Code. 
+All rights reserved.
 
-You may link to or reference puzzles from Advent of Code in discussions, classes, source code, printed material, etc., even in commercial contexts. Advent of Code does not claim ownership or copyright over your solution implementation.
+You may link to or reference puzzles from Advent of Code in discussions, classes, source code, printed material, etc.,
+even in commercial contexts.
+Advent of Code does not claim ownership or copyright over your solution implementation.
