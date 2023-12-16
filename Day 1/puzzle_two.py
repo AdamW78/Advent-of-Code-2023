@@ -1,5 +1,4 @@
-POSS_NUMBERS = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9",
-                "zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine"]
+POSS_NUMBERS = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine"]
 
 
 def get_num_at_index(string_to_index, index_num) -> int:
@@ -15,27 +14,21 @@ def get_num_at_index(string_to_index, index_num) -> int:
                 return i
 
 
-line_nums = list()
+line_nums = []
 with (open('input', 'rt', encoding='utf8') as input_file):
     read_line = input_file.readline().strip('\n')
     while read_line:
-        minIndexLeft = len(read_line)
-        minIndexRight = len(read_line)
+        min_index, max_index = len(read_line), -1
         for index, number in enumerate(POSS_NUMBERS):
             search_result = read_line.find(number)
             if search_result != -1:
-                minIndexLeft = min(minIndexLeft, search_result)
-            # print(f"Search String Right: {read_line[::-1]}")
-            # print(f"Search Substring Right: {number[::-1]}")
-            # print(f"Search Result Right: {read_line[::-1].find(number[::-1])}")
+                min_index = min(min_index, search_result)
             search_result = read_line[::-1].find(number[::-1])
             if search_result != -1:
-                minIndexRight = min(minIndexRight, search_result + len(number) - 1)
-        maxIndex = (len(read_line) - 1) - minIndexRight
-        num1 = get_num_at_index(read_line, minIndexLeft)
-        num2 = get_num_at_index(read_line, maxIndex)
+                max_index = max(max_index, (len(read_line) - 1) - (search_result + len(number) - 1))
+        num1 = get_num_at_index(read_line, min_index)
+        num2 = get_num_at_index(read_line, max_index)
         line_num = int(f"{num1}{num2}")
         line_nums.append(line_num)
         read_line = input_file.readline().strip('\n')
-
 print(sum(line_nums))
