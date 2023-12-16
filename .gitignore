@@ -239,3 +239,6 @@ cython_debug/
 #  option (not recommended) you can uncomment the following to ignore the entire idea folder.
 #.idea/
 
+# Advent of Code Inputs
+/Day 1/input
+
