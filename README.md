@@ -124,7 +124,7 @@ You can also ask for hints in the [subreddit](https://www.reddit.com/r/adventofc
   but I feel like it's harder to get better at programming 
   if you ask an AI to do the programming for you.)
 
-* Can I copy/redistribute part of Advent of Code?
+* **Can I copy/redistribute part of Advent of Code?**
   * Please don't. 
   Advent of Code is free to use, not free to copy. 
   If you're posting a code repository somewhere,
