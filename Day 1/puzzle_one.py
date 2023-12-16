@@ -1,5 +1,5 @@
 nums = list()
-with open('../input', 'rt', encoding='utf8') as input_file:
+with open('input', 'rt', encoding='utf8') as input_file:
     read_line = input_file.readline()
     while read_line:
         c1 = None
