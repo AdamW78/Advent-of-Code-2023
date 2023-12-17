@@ -1,3 +1,6 @@
+"""
+https://adventofcode.com/2023/day/4#part2
+"""
 input_array = None
 with open('input', 'rt', encoding='utf8') as input_file:
     input_array = input_file.readlines()
