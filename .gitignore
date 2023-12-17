@@ -242,4 +242,5 @@ cython_debug/
 # Advent of Code Inputs
 /Day 1/input
 /Day 2/input
-
+/Day 3/input
+/Day 3/example_input
