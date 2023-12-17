@@ -1,31 +1,31 @@
+"""
+https://adventofcode.com/2023/day/3#day-desc
+"""
 import string
+from read_input import read
 
-input_array = None
-with open('input', 'rt', encoding='utf8') as input_file:
-    input_array = input_file.readlines()
+INPUT_ARR = read()
 
-total_sum = 0
-for line_number, line in enumerate(input_array):
-    cur_num = ""
+TOTAL_SUM = 0
+for line_number, line in enumerate(INPUT_ARR):
+    CUR_NUM = ""
     for char_number, char in enumerate(line):
         if char.isdigit():
-            cur_num += char
-        elif char == '.' or char == '\n':
-            num_digits = len(cur_num)
-            found_symbol = False
-            if cur_num != '':
+            CUR_NUM += char
+        elif char in ('.', '\n'):
+            NUM_DIGITS = len(CUR_NUM)
+            FOUND = False
+            if CUR_NUM != '':
                 for i in range(line_number - 1, line_number + 2):
-                    for k in range(char_number - num_digits - 1, char_number + 1):
-                        if (0 <= i < len(input_array)) and (0 <= k < len(line)):
-                            if input_array[i][k] != '.' and input_array[i][k] in string.punctuation:
-                                found_symbol = True
-            if found_symbol:
-                total_sum += int(cur_num)
-            cur_num = ""
+                    for k in range(char_number - NUM_DIGITS - 1, char_number + 1):
+                        if (0 <= i < len(INPUT_ARR)) and (0 <= k < len(line)):
+                            if INPUT_ARR[i][k] != '.' and INPUT_ARR[i][k] in string.punctuation:
+                                FOUND = True
+            if FOUND:
+                TOTAL_SUM += int(CUR_NUM)
+            CUR_NUM = ""
         else:
-            if cur_num != "":
-                total_sum += int(cur_num)
-                cur_num = ""
-print(total_sum)
-
-
+            if CUR_NUM != "":
+                TOTAL_SUM += int(CUR_NUM)
+                CUR_NUM = ""
+print(TOTAL_SUM)
