@@ -7,7 +7,9 @@ POSS_NUMBERS = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9",
 
 
 def get_num_at_index(string_to_index, index_num) -> int:
-    """ Used to fetch an integer, represented either as a string or an int-literal, from POSS_NUMBERS """
+    """
+    Used to fetch an integer, represented either as a string or an int-literal, from POSS_NUMBERS
+    """
     if string_to_index[index_num].isdigit():
         return int(string_to_index[index_num])
     build_a_str = ""
