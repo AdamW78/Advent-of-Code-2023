@@ -240,9 +240,9 @@ cython_debug/
 #.idea/
 
 # Advent of Code Inputs
-/Day 1/input
-/Day 2/input
-/Day 3/input
-/Day 3/example_input
-/Day 4/input
-/Day 4/example_input
+/Day-1/input
+/Day-2/input
+/Day-3/input
+/Day-3/example_input
+/Day-4/input
+/Day-4/example_input
