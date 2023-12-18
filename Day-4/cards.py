@@ -19,4 +19,4 @@ def get_card(line) -> namedtuple("Card", "num_copies num_matches"):
     for number in card_numbers:
         if number in winning_numbers:
             num_matches += 1
-    return Card(0, num_matches)
+    return Card(1, num_matches)
