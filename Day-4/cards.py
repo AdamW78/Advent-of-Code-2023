@@ -1,16 +1,20 @@
 """
 Used to read in cards from https://adventofcode.com/2023/day/4
 """
-from collections import namedtuple
+from recordclass import recordclass, RecordClass
 
 
-def get_card(line) -> namedtuple("Card", "num_copies num_matches"):
+class Card(RecordClass):
+    num_copies: int
+    num_matches: int
+
+
+def get_card(line) -> recordclass("Card", "num_copies num_matches"):
     """
     Parse a line, transform into Card namedtuple object
     :param line: Line to parse
-    :return: Card namedtuple
+    :return: Card recordclass
     """
-    Card = namedtuple("Card", "num_copies num_matches")
     line = line[line.index(': ') + 2:]
     line = line.split(' | ')
     winning_numbers = [int(x) for x in line[0].split(' ') if x]
