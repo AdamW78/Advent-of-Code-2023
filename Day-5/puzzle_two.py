@@ -14,8 +14,9 @@ def read_seeds(filename: str) -> int:
         seed_ranges = [int(x) for x in file.readline().strip('seeds: ').rstrip('\n').split(' ')]
         all_seeds = []
         for i in range(0, len(seed_ranges), 2):
-            for seed_num in range(seed_ranges[i], seed_ranges[i] + seed_ranges[i+1]):
-                all_seeds.append(seed_num)
+            for seed in (seed_ranges[i], seed_ranges[i] + (seed_ranges[i+1] - 1)):
+                print(seed)
+                all_seeds.append(seed)
         print(find_min_mapped_seed(file, all_seeds))
 
 

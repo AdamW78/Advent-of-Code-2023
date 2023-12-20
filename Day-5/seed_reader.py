@@ -64,6 +64,13 @@ def convert_seeds_to_locations(seeds, category_mappings) -> List[int]:
     return seeds
 
 
+def find_min_location_mapping(category_mappings: Tuple[List[Mapping], ...]) -> int:
+    final_mapping = category_mappings[len(category_mappings) - 1]
+    min_mapping = final_mapping[0].mapping
+    for mapping in final_mapping:
+        min_mapping
+
+
 def find_min_mapped_seed(file: TextIOWrapper, seeds: tuple) -> int:
     """
     Reads the input file line-by-line, creating mappings according it
