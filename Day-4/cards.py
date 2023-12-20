@@ -4,7 +4,10 @@ Used to read in cards from https://adventofcode.com/2023/day/4
 from recordclass import recordclass, RecordClass
 
 
-class Card(RecordClass):
+class Card(RecordClass):  # pylint: disable=too-few-public-methods
+    """
+    Class with two mutable values
+    """
     num_copies: int
     num_matches: int
 
