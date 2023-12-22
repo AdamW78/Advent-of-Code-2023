@@ -1,7 +1,7 @@
 """
 https://adventofcode.com/2023/day/5#part2
 """
-from seed_reader import find_min_mapped_seed
+from seed_reader import find_mappings
 
 
 def read_seeds(filename: str) -> int:
@@ -11,13 +11,12 @@ def read_seeds(filename: str) -> int:
     :param filename: A path to file input
     """
     with open(filename, 'rt', encoding='utf8') as file:
-        seed_ranges = [int(x) for x in file.readline().strip('seeds: ').rstrip('\n').split(' ')]
-        all_seeds = []
-        for i in range(0, len(seed_ranges), 2):
-            for seed in (seed_ranges[i], seed_ranges[i] + (seed_ranges[i+1] - 1)):
-                print(seed)
-                all_seeds.append(seed)
-        print(find_min_mapped_seed(file, all_seeds))
+        seed_starts = [int(x) for x in file.readline().strip('seeds: ').rstrip('\n').split(' ')]
+        seed_ends = seed_starts[1::2]
+        seed_starts = seed_starts[::2]
+        seed_ends = [((seed_ends[i] + seed_starts[i]) - 1) for i in range(len(seed_ends))]
+        seed_ranges = zip(seed_starts, seed_ends)
+        return find_mappings(file, seed_ranges)
 
 
-read_seeds('example_input')
+print(read_seeds('input'))
