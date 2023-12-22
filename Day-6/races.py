@@ -10,6 +10,11 @@ Race = namedtuple('Race', 'duration record')
 
 
 def find_ways_to_win(race: Race):
+    """
+    Finds the number of ways to win a given race (by beating the race's record)
+    :param race: race to find number of ways to win for
+    :return: number of ways to win a given race
+    """
     num_ways_to_win = 0
     t_charge = race.duration // 2
     t_go = race.duration - t_charge
