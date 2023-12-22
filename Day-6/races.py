@@ -9,6 +9,26 @@ import read_input
 Race = namedtuple('Race', 'duration record')
 
 
+def find_ways_to_win(race: Race):
+    num_ways_to_win = 0
+    t_charge = race.duration // 2
+    t_go = race.duration - t_charge
+    init_vals = tuple((t_charge, t_go))
+    while t_charge * t_go > race.record:
+        num_ways_to_win += 1
+        t_charge -= 1
+        t_go += 1
+    t_go = race.duration // 2
+    t_charge = race.duration - t_go
+    while t_charge * t_go > race.record:
+        if (t_charge, t_go) == init_vals:
+            num_ways_to_win -= 1
+        num_ways_to_win += 1
+        t_charge += 1
+        t_go -= 1
+    return num_ways_to_win
+
+
 def read_races(file=None, kern=False):
     """
     Read all races from the input file and return tuple of namedtuple Races
