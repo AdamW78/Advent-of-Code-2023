@@ -36,8 +36,8 @@ def navigate_desert(directions: str, desert_map: Tuple[Node, ...], start: Node) 
 
 
 d_map = read_desert_map('input')
-d = d_map[0]
+dirs = d_map[0]
 s = d_map[2]
 d_map = d_map[1]
-STEPS = navigate_desert(d, d_map, s)
+STEPS = navigate_desert(dirs, d_map, s)
 print(STEPS)
